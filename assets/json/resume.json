@@ -1,12 +1,12 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Igor Udot",
+    "label": "Software Engener",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "horw7001@gmail.com",
+    "phone": "",
+    "url": "https://github.com/horw/",
+    "summary": "Living in Shanhai",
     "location": {
       "address": "2712 Broadway St",
       "postalCode": "CA 94115",
@@ -63,12 +63,16 @@
   "skills": [],
   "languages": [
     {
-      "language": "German",
-      "fluency": "Native speaker"
-    },
-    {
       "language": "English",
       "fluency": "Fluent"
+    },
+    {
+      "language": "Chinese",
+      "fluency": "Fluent"
+    },
+    {
+      "language": "Russian",
+      "fluency": "Native"
     }
   ],
   "interests": [],

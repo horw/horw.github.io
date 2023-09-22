@@ -9,4 +9,4 @@ giscus_comments: true
 related_posts: false
 related_publications: einstein1950meaning, einstein1905movement
 ---
-Don't use pyexpect without with open('file', 'r') use with variable instead f=('file', 'r') [distill style post]({% post_url 2018-12-22-distill %}).
+https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally#manually-change-npms-default-directory

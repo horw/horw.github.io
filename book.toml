@@ -1,0 +1,6 @@
+[book]
+authors = ["igor udot"]
+language = "en"
+multilingual = false
+src = "src"
+title = "hello-world"

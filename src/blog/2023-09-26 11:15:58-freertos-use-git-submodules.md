@@ -7,6 +7,7 @@ The installation is well explained in the 'Building the Posix/Linux Simulator De
 ```
 git submodule update --init --recursive
 ```
+P.S. I used this [link](https://forums.freertos.org/t/how-can-i-build-freertos-on-linux/17938/4) to get started.
 
 ---
 Related: 

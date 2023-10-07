@@ -2,13 +2,11 @@
 
 
 When I read the Rust book, I noticed a good way to pass variables into a program in the same line as code execution.
-<br>
-> :warning: This method of working with variables can only be used in a local debug environment because directly writing variables in this way can pose security issues.
-
-<br>
+> [!WARNING]  
+> This method of working with variables can only be used in a local debug environment because directly writing variables in this way can pose security issues.
 
 Code example:
-```
+```rust
 fn main() {
     let val = env!("SOMETHING", "Please set up variable: SOMETHING");
     println!("value was found {val}");
@@ -17,7 +15,7 @@ fn main() {
 
 Terminal command:
 
-```
+```bash
 SOMETHING=1 cargo run
 ```
 

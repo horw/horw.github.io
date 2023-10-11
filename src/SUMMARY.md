@@ -9,6 +9,7 @@
   - [Pass env and run code with oneline command](./blog/2023-10-07%2011:29:00-pass-env-and-run-code-with-oneline-command.md)
   - [Math books list](./blog/2023-10-08%2017:24:00-math-books-list.md)
   - [Learning BLE](./blog/2023-10-10%2011:00:00-learning-ble.md)
+  - [Add discussion to your page - Giscus](./blog/2023-10-10%2011:00:00-add-discussions-to-your-page.md)
 - [About](./about.md)
 
 

@@ -1,8 +1,6 @@
 # Summary
 
 - [Inbox](./planning.md)
-- [TODO](./todo.md)
-
 
 - [Welcome page](./blog.md)
   - [Node js global package permition error](./blog/2023-09-23%2011:52:58-node-js-global-permition-error.md)

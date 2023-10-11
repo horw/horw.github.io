@@ -1,9 +1,10 @@
 # Summary
 
-- [Planning](./planning.md)
+- [Inbox](./planning.md)
+- [TODO](./todo.md)
 
-  -  [Rust](./planning/rust/get_started.md)
-- [Blog](./blog.md)
+
+- [Welcome page](./blog.md)
   - [Node js global package permition error](./blog/2023-09-23%2011:52:58-node-js-global-permition-error.md)
   - [FreeRTOS use github submodules](./blog/2023-09-26%2011:15:58-freertos-use-git-submodules.md)
   - [Pass env and run code with oneline command](./blog/2023-10-07%2011:29:00-pass-env-and-run-code-with-oneline-command.md)

@@ -196,4 +196,20 @@ fn main() {
 ```
 If you have a some good solution please leave it in comment section.
 
+
+<script src="https://giscus.app/client.js"
+        data-repo="horw/horw.github.io"
+        data-repo-id="R_kgDOKS2Ebg"
+        data-category="Comments"
+        data-category-id="DIC_kwDOKS2Ebs4CaByw"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
 > Publication Date: 2023-10-11 20:45:20

@@ -9,7 +9,9 @@ Day 1
 
 
 ---
+
 Related: 
+- [Mastering Microcontroller and Embedded Driver Development](https://www.udemy.com/course/mastering-microcontroller-with-peripheral-driver-development/)
 - [Linux Device Drivers, Third Edition](https://lwn.net/Kernel/LDD3/)
 ---
 

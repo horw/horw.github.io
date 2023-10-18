@@ -1,7 +1,5 @@
 # Summary
 
-- [Inbox](./planning.md)
-
 - [Welcome page](./blog.md)
   - [Node js global package permition error](./blog/2023-09-23%2011:52:58-node-js-global-permition-error.md)
   - [FreeRTOS use github submodules](./blog/2023-09-26%2011:15:58-freertos-use-git-submodules.md)
@@ -10,6 +8,7 @@
   - [Learning BLE](./blog/2023-10-10%2011:00:00-learning-ble.md)
   - [Add discussion to your page - Giscus](./blog/2023-10-10%2011:00:00-add-discussions-to-your-page.md)
   - [Rust dyn trait matching](./blog/2023-10-11%2020:45:20-rust-dyn-trait-matching.md)
+  - [Learning about embedded driver development](./blog/2023-10-18%2010:39:10-learning-about-embedded-driver-development.md)
 - [About](./about.md)
 
 

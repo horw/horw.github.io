@@ -13,6 +13,7 @@ Day 1
 Related: 
 - [Mastering Microcontroller and Embedded Driver Development](https://www.udemy.com/course/mastering-microcontroller-with-peripheral-driver-development/)
 - [Linux Device Drivers, Third Edition](https://lwn.net/Kernel/LDD3/)
+- ['osdev](https://wiki.osdev.org/Main_Page)
 ---
 
 > Publication Date: 2023-10-18 10:39:10

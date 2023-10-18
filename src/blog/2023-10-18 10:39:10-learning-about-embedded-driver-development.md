@@ -11,6 +11,7 @@ Day 1
 ---
 
 Related: 
+- [Read more code than you write](https://death.andgravity.com/aosa)
 - [Mastering Microcontroller and Embedded Driver Development](https://www.udemy.com/course/mastering-microcontroller-with-peripheral-driver-development/)
 - [Linux Device Drivers, Third Edition](https://lwn.net/Kernel/LDD3/)
 - ['osdev](https://wiki.osdev.org/Main_Page)

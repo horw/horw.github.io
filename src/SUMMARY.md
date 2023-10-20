@@ -9,6 +9,7 @@
   - [Add discussion to your page - Giscus](./blog/2023-10-10%2011:00:00-add-discussions-to-your-page.md)
   - [Rust dyn trait matching](./blog/2023-10-11%2020:45:20-rust-dyn-trait-matching.md)
   - [Learning about embedded driver development](./blog/2023-10-18%2010:39:10-learning-about-embedded-driver-development.md)
+  - [Pydantic calculated field](./blog/2023-10-20%2011:45:00-pydantic-calculated-field.md)
 - [About](./about.md)
 
 

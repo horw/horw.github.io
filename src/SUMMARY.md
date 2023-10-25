@@ -10,6 +10,7 @@
   - [Rust dyn trait matching](./blog/2023-10-11%2020:45:20-rust-dyn-trait-matching.md)
   - [Learning about embedded driver development](./blog/2023-10-18%2010:39:10-learning-about-embedded-driver-development.md)
   - [Pydantic calculated field](./blog/2023-10-20%2011:45:00-pydantic-calculated-field.md)
+  - [Change the Git commit author](./blog/2023-10-25%2010:37:00-git-change-author-of-commit.md)
 - [About](./about.md)
 
 

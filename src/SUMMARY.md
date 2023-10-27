@@ -11,6 +11,7 @@
   - [Learning about embedded driver development](./blog/2023-10-18%2010:39:10-learning-about-embedded-driver-development.md)
   - [Pydantic calculated field](./blog/2023-10-20%2011:45:00-pydantic-calculated-field.md)
   - [Change the Git commit author](./blog/2023-10-25%2010:37:00-git-change-author-of-commit.md)
+  - [Debug Python created File Descriptors(fd)](./blog/2023-10-27%2014:35:00-get-number-of-fd-created-by-python.md)
 - [About](./about.md)
 
 

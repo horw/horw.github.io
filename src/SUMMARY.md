@@ -12,6 +12,7 @@
   - [Pydantic calculated field](./blog/2023-10-20%2011:45:00-pydantic-calculated-field.md)
   - [Change the Git commit author](./blog/2023-10-25%2010:37:00-git-change-author-of-commit.md)
   - [Debug Python created File Descriptors(fd)](./blog/2023-10-27%2014:35:00-get-number-of-fd-created-by-python.md)
+  - [QDrant and Rag notes)](./blog/2023-12-04%2014:35:00-vector-database.md)
 - [About](./about.md)
 
 

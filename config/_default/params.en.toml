@@ -9,7 +9,7 @@ keywords = ["Theme", "Hugo"]
 [app]
   # optional site title override for the app when added to an iOS home screen or Android launcher
   # 当添加到 iOS 主屏幕或者 Android 启动器时的标题, 覆盖默认标题
-  title = "DoIt"
+  title = "Horw"
   # whether to omit favicon resource links
   # 是否隐藏网站图标资源链接
   noFavicon = false
@@ -83,10 +83,10 @@ keywords = ["Theme", "Hugo"]
     avatarLinkURL = ""
     # title shown in home page (HTML format is supported)
     # 主页显示的网站标题 (支持 HTML 格式)
-    title = ""
+    title = "Horw"
     # subtitle shown in home page
     # 主页显示的网站副标题
-    subtitle = "A Clean, Elegant but Advanced Hugo Theme"
+    subtitle = "Igor Udot is greeting you!"
     # whether to use typeit animation for subtitle
     # 是否为副标题显示打字机动画
     typeit = true
@@ -117,14 +117,14 @@ keywords = ["Theme", "Hugo"]
   Devto = ""
   Douban = ""
   Dribbble = ""
-  Email = "xxxx@xxxx.com"
-  Facebook = "xxxx"
+  Email = "horw7001@gmail.com"
+  Facebook = ""
   Fivehundredpx = ""
   Flickr = ""
   Foursquare = ""
   FreeCodeCamp = ""
   Gitea = ""
-  GitHub = "xxxx"
+  GitHub = "horw"
   Gitlab = ""
   Goodreads = ""
   Googlescholar = ""
@@ -133,10 +133,10 @@ keywords = ["Theme", "Hugo"]
   Jsfiddle = ""
   Keybase = ""
   Kickstarter = ""
-  Ko-Fi = "xxx"
+  Ko-Fi = ""
   Lastfm = ""
-  Liberapay = "xxx"
-  Linkedin = ""
+  Liberapay = ""
+  Linkedin = "horw"
   Linktree = ""
   Matrix = ""
   Medium = ""
@@ -151,7 +151,7 @@ keywords = ["Theme", "Hugo"]
   Quora = ""
   Reddit = ""
   Researchgate = ""
-  RSS = true
+  RSS = false
   Skype = ""
   Slidershare = ""
   Snapchat = ""
@@ -160,11 +160,11 @@ keywords = ["Theme", "Hugo"]
   Stackoverflow = ""
   Steam = ""
   Strava = ""
-  Telegram = "xxxx"
+  Telegram = "horw7001"
   Thingiverse = ""
   Tumblr = ""
   Twitch = ""
-  Twitter = "xxxx"
+  Twitter = ""
   Vine = ""
   VK = ""
   Weibo = ""
@@ -174,18 +174,12 @@ keywords = ["Theme", "Hugo"]
   XMPP = ""
   Youtubechannel = ""
   Youtubecustom = ""
-  Youtubelegacy = "xxxx"
+  Youtubelegacy = ""
   Zhihu = ""
-  [social.Mastodon]
-    id = "@xxxx"
-    prefix = "https://mastodon.technology/"
-  [social.Diaspora]
-    id = "@xxxx"
-    prefix = "https://yyyy/"
 # Sponsor config
 # 赞助设置
 [sponsor]
   enable = true
   bio = "If you find this post helpful, please consider sponsoring."
-  link = "https://github.com/sponsors/HEIGE-PCloud"
+  link = "https://github.com/sponsors/horw"
   # custom = "<a href=\"https://www.buymeacoffee.com/PCloud\" target=\"_blank\"><img src=\"https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png\" alt=\"Buy Me A Coffee\" style=\"height: 40px !important;width: 145 !important;\" ></a>"

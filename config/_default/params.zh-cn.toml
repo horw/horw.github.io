@@ -9,7 +9,7 @@ keywords = ["Theme", "Hugo"]
 [app]
   # optional site title override for the app when added to an iOS home screen or Android launcher
   # 当添加到 iOS 主屏幕或者 Android 启动器时的标题, 覆盖默认标题
-  title = "DoIt"
+  title = "Horw"
   # whether to omit favicon resource links
   # 是否隐藏网站图标资源链接
   noFavicon = false
@@ -86,7 +86,7 @@ keywords = ["Theme", "Hugo"]
     title = ""
     # subtitle shown in home page
     # 主页显示的网站副标题
-    subtitle = "一个简洁、优雅且高效的 Hugo 主题"
+    subtitle = "吴一格给你打招呼"
     # whether to use typeit animation for subtitle
     # 是否为副标题显示打字机动画
     typeit = true
@@ -185,5 +185,5 @@ keywords = ["Theme", "Hugo"]
 [sponsor]
   enable = false
   bio = "如果你觉得这篇文章对你有所帮助，欢迎赞赏~"
-  link = "https://github.com/sponsors/HEIGE-PCloud"
+  link = "https://github.com/sponsors/horw"
   # custom = "<a href=\"https://www.buymeacoffee.com/PCloud\" target=\"_blank\"><img src=\"https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png\" alt=\"Buy Me A Coffee\" style=\"height: 40px !important;width: 145 !important;\" ></a>"

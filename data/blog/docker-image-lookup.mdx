@@ -1,0 +1,34 @@
+---
+title: Docker image lookup
+date: '2022-12-31'
+tags: ['docker']
+draft: false
+summary: 'Docker image lookup'
+---
+
+```bash
+FROM python:3.9-slim
+```
+
+```
+export IMAGE=python:3.10-slim
+```
+
+```yaml
+version: '3.1'
+
+services:
+  backend-open:
+    build:
+      context: .
+    image: ${IMAGE:-base-image-open}
+    command:
+      - python
+      - --version
+```
+
+Как работает данный файл:
+1. docker compose up сначала смотрит на image, если image нет локально, то он смотрит удаленно, а если его нет и удаленно, то он выполняет билд. Если была комманда build docker compose up --build пропускает эту проверку сразу идет билдить. Как результат будет создан image с именем которое было указано внутри поля image в данном случает base-image-open
+2.  Так как в ci есть переменная image, во время выполнения docker compose up он сначала проверит образ, который называется \$\{IMAGE\} поищет его локально и если не найдет, то скачает его, и соответственно не выполняя билд(так как уже нашел образ). Если нужно будет обновить образ, то сначала нужно выполнить docker compose pull
+
+Таким образом ci билд будет напрямую качать IMAGE, а локальная сборка будет создавать локальный образ.

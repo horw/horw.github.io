@@ -1,0 +1,75 @@
+---
+title: Streamlit just released version 1.37.0
+date: '2022-12-31'
+tags: ['python', 'streamlit']
+draft: false
+summary: 'Streamlit just released version 1.37.0 on July 25, which includes important features'
+---
+
+Streamlit just released version 1.37.0 on July 25, which includes important features:
+
+🍪 Introducing st.context to read headers and cookies!
+
+⭐ Introducing st.feedback to collect ratings and sentiment from your users!
+
+👟 Announcing the general availability of st.fragment, a decorator that lets you rerun functions independently of the whole page.
+
+🍿 Announcing the general availability of st.dialog, a decorator that lets you create modal dialogs.
+
+What is Streamlit?
+
+It is a tool that helps you easily create simple dataflow websites using Python. It's quite simple to use because it includes a lot of templates.
+
+For example:
+```python
+import streamlit as st
+
+st.write('hello world')
+```
+You can achieve this in just a few lines of code.
+
+
+How streamlit works?
+
+When you interact with a Streamlit page, such as clicking buttons or editing text blocks, it reloads the entire page. This behavior might seem odd because every time when you need information, it retrieves it again. Imagine transferring 10 MB of data and then having to retrieve it again each time you interact with the page. That's a lot of data...
+
+There have been a few solutions like cache or session_state, but they can still be quite inconvenient to use. Cache can be difficult to make consistent every time, and session_state clearning when you reload your page.
+
+In version 1.37.0, Streamlit introduced the fragment feature, which is actually a very important addition. Now you can reload just one fragment instead of the entire code. You can do something like this:
+
+
+```python
+import streamlit as st
+
+global_data = [1, 2, 3, 4, 5]
+
+
+@st.fragment()
+def edit_data():
+    if global_data:
+        if st.button("Remove value"):
+            value = global_data.pop()
+            st.info(f"Value {value} was popped")
+    else:
+        st.warning("Your array is empty")
+
+
+edit_data()
+```
+
+Previously, you needed to do much more work, but now it's clear and simple.
+
+Another important feature is st.context, which allows you to read headers and cookies. You can use an API gateway like Traefik or Kong to enrich your headers or cookies.
+
+For example, if you have authentication set up, you can do it this way:
+
+Gateway --> Auth service --> set up headers and cookies --> Streamlit app.
+
+Within the Streamlit app, we can take information from headers and cookies, use it, and provide access or additional information.
+
+So the proxy helps us to authorize, and Streamlit simply uses the information we already have.
+
+I believe these two features will inspire more people to use Streamlit for:
+- Website prototyping
+- Data science pages
+- Admin dashboards

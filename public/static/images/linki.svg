@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100">
+    <!-- Background -->
+    <rect width="300" height="100" fill="#f0f0f0"/>
+
+    <!-- Text "Linki" -->
+    <text x="150" y="60"
+          font-family="Arial, sans-serif"
+          font-size="48"
+          font-weight="bold"
+          fill="#2c3e50"
+          text-anchor="middle"
+          dominant-baseline="middle">
+        Linki
+    </text>
+
+    <!-- Decorative underline -->
+    <path d="M 90 70 Q 150 80 210 70"
+          stroke="#3498db"
+          stroke-width="3"
+          fill="none"/>
+</svg>

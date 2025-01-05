@@ -1,9 +1,41 @@
 ---
 title: Python aaA bbB ccC sort
-date: '2022-12-31'
+date: '2024-12-31'
 tags: ['python', 'sorting']
 draft: false
 summary: 'Just "5 minutes"'
 ---
 
-Test
+It's a funny story about "5 min" programming.
+
+I follow @yegor256's channel and he posted something like:
+
+`
+Let me remind you that if you are a fan of the "Elegant Objects" programming paradigm, you may add yourself to the list of fans at elegantobjects.org (https://www.elegantobjects.org/) — just send a pull request (https://github.com/yegor256/elegantobjects.github.io/) and you will be there.
+`
+
+Since I had read this book, I thought I'd add myself as a follower. I tried to do it, but it was challenging because he required names to be in aaA bbB ccC order. I thought "hah, easy, let's Python it!" But then I got stuck because Python sorts lexicographically, not in the way I mentioned.
+
+I searched for resources and found some information about sorting, for example this one:
+https://learnpython.com/blog/sort-alphabetically-in-python/
+
+As a result, I wrote a function to do it, which was quite amusing. Here's the main part of the function:
+
+```python
+def sort_key(fan):
+    """
+    Sorting key for fans:
+    1. Sort by the first letter of the nickname (case-insensitive).
+    2. If the first letter is the same, sort by whether it's uppercase.
+    3. Finally, sort alphabetically by the full nickname.
+    """
+    _nickname = fan[1]
+    return (
+        _nickname[0].lower(),
+        _nickname[0].isupper(),
+        _nickname.lower(),
+    )
+```
+
+Pull request:
+https://github.com/yegor256/elegantobjects.github.io/pull/146

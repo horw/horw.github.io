@@ -33,7 +33,7 @@ const MobileNav = () => {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
-          className="h-8 w-8 text-gray-900 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400"
+          className="h-8 w-8 text-gray-900 hover:text-blue-500 dark:text-gray-100 dark:hover:text-blue-400"
         >
           <path
             fillRule="evenodd"
@@ -76,7 +76,7 @@ const MobileNav = () => {
                   <Link
                     key={link.title}
                     href={link.href}
-                    className="mb-4 py-2 pr-4 text-2xl font-bold tracking-widest text-gray-900 outline outline-0 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400"
+                    className="mb-4 py-2 pr-4 text-2xl font-bold tracking-widest text-gray-900 outline outline-0 hover:text-blue-500 dark:text-gray-100 dark:hover:text-blue-400"
                     onClick={onToggleNav}
                   >
                     {link.title}
@@ -85,7 +85,7 @@ const MobileNav = () => {
               </nav>
 
               <button
-                className="fixed right-4 top-7 z-80 h-16 w-16 p-4 text-gray-900 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400"
+                className="fixed right-4 top-7 z-80 h-16 w-16 p-4 text-gray-900 hover:text-blue-500 dark:text-gray-100 dark:hover:text-blue-400"
                 aria-label="Toggle Menu"
                 onClick={onToggleNav}
               >

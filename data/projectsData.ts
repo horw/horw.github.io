@@ -6,7 +6,12 @@ interface Project {
 }
 
 const projectsData: Project[] = [
-
+  {
+    title: 'Linki',
+    description: 'Make language learning engaging and effective',
+    imgSrc: '/static/images/linki.svg',
+    href: '',
+  },
 ]
 
 export default projectsData

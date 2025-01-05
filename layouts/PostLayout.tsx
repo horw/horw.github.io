@@ -39,10 +39,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
         {/* Header */}
         <header className="space-y-6 py-8">
           <div className="text-center">
-            <time
-              dateTime={date}
-              className="text-sm text-gray-500 dark:text-gray-400"
-            >
+            <time dateTime={date} className="text-sm text-gray-500 dark:text-gray-400">
               {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
             </time>
             <PageTitle>{title}</PageTitle>
@@ -52,10 +49,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
           <div className="border-y border-gray-200 py-4 dark:border-gray-800">
             <ul className="flex flex-wrap justify-center gap-6">
               {authorDetails.map((author) => (
-                <li
-                  className="flex items-center space-x-3"
-                  key={author.name}
-                >
+                <li className="flex items-center space-x-3" key={author.name}>
                   {author.avatar && (
                     <Image
                       src={author.avatar}
@@ -66,9 +60,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                     />
                   )}
                   <div>
-                    <p className="font-medium text-gray-900 dark:text-gray-100">
-                      {author.name}
-                    </p>
+                    <p className="font-medium text-gray-900 dark:text-gray-100">{author.name}</p>
                     {author.twitter && (
                       <Link
                         href={author.twitter}
@@ -87,9 +79,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
         </header>
 
         {/* Main Content */}
-        <div className="prose max-w-none pb-8 dark:prose-invert">
-          {children}
-        </div>
+        <div className="prose max-w-none pb-8 dark:prose-invert">{children}</div>
 
         {/* Tags */}
         {tags && tags.length > 0 && (
@@ -145,11 +135,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
               href={`/${basePath}`}
               className="flex items-center space-x-1 text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400"
             >
-              <svg
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                className="h-5 w-5"
-              >
+              <svg viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5">
                 <path
                   fillRule="evenodd"
                   d="M17 10a.75.75 0 01-.75.75H5.612l4.158 3.96a.75.75 0 11-1.04 1.08l-5.5-5.25a.75.75 0 010-1.08l5.5-5.25a.75.75 0 111.04 1.08L5.612 9.25H16.25A.75.75 0 0117 10z"
@@ -167,7 +153,6 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
               </Link>
             </div>
           </div>
-
         </footer>
       </article>
     </SectionContainer>

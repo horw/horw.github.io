@@ -14,9 +14,7 @@ export default function Home({ posts }) {
           <h1 className="text-3xl font-bold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
             Latest Articles
           </h1>
-          <p className="text-lg text-gray-600 dark:text-gray-400">
-            {siteMetadata.description}
-          </p>
+          <p className="text-lg text-gray-600 dark:text-gray-400">{siteMetadata.description}</p>
         </div>
 
         {/* Featured Post - First post gets special treatment */}
@@ -37,9 +35,7 @@ export default function Home({ posts }) {
                 <h2 className="text-3xl font-bold group-hover:text-blue-600 dark:group-hover:text-blue-400">
                   {posts[0].title}
                 </h2>
-                <p className="text-gray-600 dark:text-gray-400 line-clamp-3">
-                  {posts[0].summary}
-                </p>
+                <p className="line-clamp-3 text-gray-600 dark:text-gray-400">{posts[0].summary}</p>
               </div>
             </article>
           </div>
@@ -61,16 +57,12 @@ export default function Home({ posts }) {
                   />
                   <div className="flex flex-col space-y-3">
                     <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
-                      <time dateTime={post.date}>
-                        {formatDate(post.date, siteMetadata.locale)}
-                      </time>
+                      <time dateTime={post.date}>{formatDate(post.date, siteMetadata.locale)}</time>
                     </div>
                     <h2 className="text-xl font-semibold group-hover:text-blue-600 dark:group-hover:text-blue-400">
                       {post.title}
                     </h2>
-                    <p className="text-gray-600 dark:text-gray-400 line-clamp-2">
-                      {post.summary}
-                    </p>
+                    <p className="line-clamp-2 text-gray-600 dark:text-gray-400">{post.summary}</p>
                   </div>
                 </article>
               </div>
@@ -90,8 +82,6 @@ export default function Home({ posts }) {
           </Link>
         </div>
       )}
-
-
     </>
   )
 }

@@ -29,9 +29,7 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
   return (
     <div className="pb-8 pt-6">
       <nav className="flex justify-between text-sm">
-        {!prevPage && (
-          <span className="cursor-auto text-gray-400">Previous</span>
-        )}
+        {!prevPage && <span className="cursor-auto text-gray-400">Previous</span>}
         {prevPage && (
           <Link
             href={currentPage - 1 === 1 ? `/${basePath}/` : `/${basePath}/page/${currentPage - 1}`}
@@ -43,9 +41,7 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
         <span className="text-gray-600 dark:text-gray-400">
           Page {currentPage} of {totalPages}
         </span>
-        {!nextPage && (
-          <span className="cursor-auto text-gray-400">Next</span>
-        )}
+        {!nextPage && <span className="cursor-auto text-gray-400">Next</span>}
         {nextPage && (
           <Link
             href={`/${basePath}/page/${currentPage + 1}`}
@@ -123,16 +119,12 @@ export default function ListLayout({
                       </Link>
                     </h2>
                     <div className="flex items-center space-x-1 text-sm text-gray-500 dark:text-gray-400">
-                      <time dateTime={date}>
-                        {formatDate(date, siteMetadata.locale)}
-                      </time>
+                      <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
                       <span>•</span>
                       <span>5 min read</span>
                     </div>
                   </div>
-                  <p className="prose text-gray-500 dark:text-gray-400 line-clamp-3">
-                    {summary}
-                  </p>
+                  <p className="prose line-clamp-3 text-gray-500 dark:text-gray-400">{summary}</p>
                   <div className="text-sm">
                     <Link
                       href={`/${path}`}

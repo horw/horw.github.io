@@ -31,9 +31,7 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
   return (
     <div className="mt-10 flex justify-between">
       {!prevPage && (
-        <span className="cursor-not-allowed rounded-lg px-4 py-2 text-gray-400">
-          Previous
-        </span>
+        <span className="cursor-not-allowed rounded-lg px-4 py-2 text-gray-400">Previous</span>
       )}
       {prevPage && (
         <Link
@@ -47,9 +45,7 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
         Page {currentPage} of {totalPages}
       </span>
       {!nextPage && (
-        <span className="cursor-not-allowed rounded-lg px-4 py-2 text-gray-400">
-          Next
-        </span>
+        <span className="cursor-not-allowed rounded-lg px-4 py-2 text-gray-400">Next</span>
       )}
       {nextPage && (
         <Link
@@ -111,7 +107,12 @@ export default function ListLayoutWithTags({
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 9l-7 7-7-7"
+              />
             </svg>
           </button>
 
@@ -165,7 +166,7 @@ export default function ListLayoutWithTags({
                   <h2 className="text-xl font-bold tracking-tight text-gray-900 group-hover:text-blue-600 dark:text-gray-100 dark:group-hover:text-blue-400">
                     {postTitle}
                   </h2>
-                  <p className="text-gray-500 line-clamp-3 dark:text-gray-400">{summary}</p>
+                  <p className="line-clamp-3 text-gray-500 dark:text-gray-400">{summary}</p>
                 </div>
               </article>
             </div>

@@ -1,0 +1,99 @@
+---
+title: 'The Importance of Version Locking in Software Development'
+date: '2025-01-06'
+tags: ['DevOps', 'CI/CD', 'Package Management', 'Best Practices']
+draft: false
+summary: 'To lock, or not to lock, that is the question.'
+---
+
+Version locking is a critical practice in software development that helps ensure consistency and reliability across different environments.
+
+## A Real-World Example
+
+Recently, I encountered an issue in a CI pipeline where a seemingly straightforward Python build process failed. Here's the original workflow:
+
+```yaml
+name: Test Build Python Packages
+
+on:
+  pull_request:
+
+jobs:
+  test-build-packages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.7'
+      - name: Build packages
+        run: |
+          bash foreach.sh build
+```
+
+The pipeline failed with this error:
+
+```
+Error: The version '3.7' with architecture 'x64' was not found for Ubuntu 24.04.
+```
+
+## What Went Wrong?
+
+The issue arose because the workflow used `ubuntu-latest`, which automatically upgraded to Ubuntu 24.04.
+This newer version of Ubuntu doesn't support Python 3.7, creating an incompatibility that broke the build process.
+
+## Solutions and Best Practices
+
+There are two immediate solutions to this problem:
+
+1. **Update Python Version**:
+   ```yaml
+   python-version: '3.10'  # Use a newer Python version
+   ```
+
+2. **Lock Ubuntu Version**:
+   ```yaml
+   runs-on: ubuntu-22.04  # Lock to a specific Ubuntu version
+   ```
+
+However, this incident highlights a broader principle: the importance of version locking across your entire stack.
+
+## Why Version Locking Matters
+
+Version locking provides several key benefits. It’s possible to list many of them, but these two are the most important, IMHO:
+
+1. **Reproducibility**: Ensures that builds are consistent across different environments and times
+2. **Time Savings**: Prevents unexpected failures that require immediate fixes
+
+## Updated Example
+
+```yaml
+name: Test Build Python Packages
+
+on:
+  pull_request:
+
+jobs:
+  test-build-packages:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.7'
+      - name: Build packages
+        run: |
+          bash foreach.sh build
+```
+
+## Conclusion
+
+Remember: Version locking isn’t about avoiding updates; it’s about controlling when and how updates happen on your terms.
+
+Save your time by avoiding unnecessary waste...
+
+## Links
+
+https://github.com/espressif/pytest-embedded/issues/329

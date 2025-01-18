@@ -1,0 +1,151 @@
+---
+
+title: Use Case of `python-hatch`  
+date: 2025-01-18  
+tags: ['python-hatch', 'shared data']  
+draft: False  
+summary: Sharing static data through a Python wheel package.  
+
+---
+
+When developing Python packages, you may need to include static files like templates, configuration files, or other resources. By leveraging `python-hatch`, you can easily package and distribute these files along with your code. Here’s how to do it.
+
+### The Problem
+
+When building Python packages, you may need to include and share static files (e.g., templates, configuration files) as part of your package. However, ensuring these files are properly packaged and accessible alongside your package can be challenging.
+
+Here’s an example of an error caused by missing static files and the desired location where they should be included with the package:
+
+```
+Traceback (most recent call last):
+  File "xxx/src/main.py", line 10, in <module>
+    main()
+  File "xxx/src/main.py", line 6, in main
+    config_mgr.read('hello')
+  File "xxx/src/myapp/config.py", line 15, in read
+    with open(fp) as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'xxx/.venv/share/myapp/templates/hello'
+Looking for templates in: xxx/.venv/share/myapp/templates
+Directory exists: False
+Directory contents: []
+```
+
+In this case, the application is attempting to access files in `xxx/.venv/share/myapp/templates`, but the files are not there. The goal is to ensure these static files are packaged and installed into the specified location alongside the rest of your package.
+
+---
+
+### Project Structure
+
+Create the following project layout:
+
+```
+.
+├── config_templates
+│   ├── hello
+│   └── world
+├── pyproject.toml
+└── src
+    ├── main.py
+    └── myapp
+        ├── config.py
+        └── __init__.py
+```
+
+#### Configuration Manager (`/src/myapp/config.py`)
+
+```python
+import sys
+from pathlib import Path
+
+class ConfigManager:
+    def __init__(self):
+        self.template_dir = Path(sys.prefix) / "share" / "myapp" / "templates"
+        print(f"Looking for templates in: {self.template_dir}")
+        print(f"Directory exists: {self.template_dir.exists()}")
+        print(f"Directory contents: {list(self.template_dir.parent.glob('**/*')) if self.template_dir.parent.exists() else 'Parent directory not found'}")
+
+    def read(self, filename):
+        filepath = self.template_dir / filename
+        with open(filepath) as f:
+            print(f.read())
+```
+
+#### Main Application (`/src/main.py`)
+
+```python
+from myapp.config import ConfigManager
+
+def main():
+    config_mgr = ConfigManager()
+    config_mgr.read('hello')
+    config_mgr.read('world')
+
+if __name__ == "__main__":
+    main()
+```
+
+#### Static Files
+
+- `/config_templates/hello`:  
+  ```
+  How are you?
+  ```
+- `/config_templates/world`:  
+  ```
+  What is it?
+  ```
+
+
+### Configuring `pyproject.toml`
+
+The key part of the solution is configuring `shared-data` in `pyproject.toml`:
+
+```toml
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "myapp"
+version = "0.1.0"
+dependencies = ["pyyaml"]
+
+[tool.hatch.build.targets.wheel.shared-data]
+"config_templates/" = "share/myapp/templates"
+```
+
+The `[tool.hatch.build.targets.wheel.shared-data]` section specifies that files from `config_templates/` will be included in the wheel and installed to `share/myapp/templates`.
+
+---
+
+### Installation and Execution
+
+1. Install your package in editable mode:  
+   ```bash
+   pip install -e .
+   ```
+
+2. Run the application:  
+   ```bash
+   python src/main.py
+   ```
+
+   Output:  
+   ```
+   Looking for templates in: /home/horw/xxx/.venv/share/myapp/templates
+   Directory exists: True
+   Directory contents: [
+     PosixPath('/home/horw/xxx/.venv/share/myapp/templates'),
+     PosixPath('/home/horw/xxx/.venv/share/myapp/templates/world'),
+     PosixPath('/home/horw/xxx/.venv/share/myapp/templates/hello')
+   ]
+
+   Content:
+   How are you?
+   What is it?
+   ```
+
+
+### Summary
+
+By including static files as shared data in your Python package, you ensure they are properly distributed and accessible at runtime. This approach is ideal for templates, configuration files, or other resources required by your application.

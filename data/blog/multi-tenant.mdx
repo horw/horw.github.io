@@ -1,0 +1,36 @@
+---
+title: 'Multi-Tenant Apps'
+date: '2025-05-12'
+tags: ['DevOps', 'CI/CD', 'Architecture', 'Best Practices']
+draft: false
+summary: 'Apps that should have been designed better... It’s not too late to use a multi-tenant approach to save the situation.'
+---
+
+When I was developing an app, I didn't consider the possibility of having multiple or different customers.  
+This led me to design the application to support only a **single customer**.
+
+By the time I realized I needed a better architectural solution... it was already too late —  
+there were many dependencies based on the customer ID, which wasn't even represented in the database or any related data source.
+
+Eventually, I figured out a way to solve the problem: **by splitting the database**.  
+This allowed me to introduce a new dimension (customer ID) simply by creating separate databases for each customer.
+
+Next, I needed a way for the app to access different databases **dynamically**.  
+There were two options:
+
+- Adding an extra argument to each request  
+- Adding custom headers
+
+I preferred using **headers** because they're easy to add and independent of the request type—unlike arguments, parameters, or JSON bodies.
+
+With the headers in place, I could identify which database each request should use.  
+Then I connected to the appropriate database — and boom, it worked as expected!  
+I was able to incorporate the customer ID (actually, *project ID*) into the data without modifying the existing structure.
+
+> Additional info: By “customer ID,” I actually mean **project ID**.  
+> Since I'll have fewer than 50 project IDs, it's acceptable to create a separate database for each one.
+
+As a result, this approach is an example of building a **multi-tenant app**, where each project has its own isolated database, but all share the same backend logic.  
+This kind of separation is helpful if you want to avoid mixing data between different customers or apps.
+
+You might want to try this approach when designing a new app.
